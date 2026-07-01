@@ -1,174 +1,221 @@
-🏥 Hospital Emergency Room Dashboard | Power BI
-📌 Project Overview
+# 🏥 Hospital Emergency Room Dashboard | Power BI
 
-This project is an interactive Hospital Emergency Room Dashboard developed using Power BI to analyze patient visits, admissions, wait times, referrals, demographics, and satisfaction scores.
+## 📌 Project Overview
 
-The dashboard transforms raw healthcare data into meaningful insights that help hospital administrators and healthcare professionals monitor emergency room performance and improve patient care through data-driven decision-making.
+This project is an interactive **Hospital Emergency Room Dashboard** built using **Power BI** to analyze emergency room operations, patient admissions, wait times, referrals, demographics, and satisfaction scores.
 
-📊 Dashboard Preview
-Monthly View Dashboard
+The dashboard converts raw healthcare data into actionable insights that help hospital administrators monitor performance, optimize resources, and improve patient care through data-driven decision-making.
 
-Patient Details Dashboard
+---
 
-🎯 Project Objectives
-Analyze emergency room patient volume.
-Monitor patient wait times and service efficiency.
-Track admission and non-admission rates.
-Analyze patient demographics by age, gender, and race.
-Identify referral department patterns.
-Measure patient satisfaction levels.
-Build an interactive Power BI dashboard for healthcare analytics.
-🛠 Tools & Technologies
-Power BI
-Power Query
-DAX
-Microsoft Excel
-Data Modeling
-📂 Dataset Information
+# 📊 Dashboard Preview
 
-The dataset contains emergency room patient records with the following fields:
+## Monthly View Dashboard
 
-Patient ID
-Patient Name
-Patient Gender
-Patient Age
-Patient Race
-Admission Status
-Patient Admission Date
-Patient Admission Time
-Department Referral
-Patient Wait Time
-Patient Satisfaction Score
-Admission Hours
-Wait Time Status
-Age Group
-📈 Dashboard Features
-✔ KPI Cards
-Total Patients
-Average Wait Time
-Patient Satisfaction Score
-Total Patients Referred
-✔ Interactive Filters
-Year
-Month
-Date Range
-✔ Interactive Visualizations
-Admission Status Analysis
-Patient Gender Distribution
-Patient Age Group Analysis
-Patient Race Analysis
-Department Referral Analysis
-Daily Patient Trend
-Wait Time Performance Analysis
-Patient Detail Table
-📊 Business Questions Answered
-1. How many patients visited the emergency room?
+![Dashboard Overview](.png)
 
-Analyze total patient volume during the selected period.
+## Patient Details Dashboard
 
-2. What is the average patient wait time?
+![Patient Details](patient-details-page.png)
 
-Monitor service efficiency and identify bottlenecks.
+---
 
-3. What percentage of patients were admitted?
+# 🎯 Project Objectives
 
-Compare admitted and non-admitted patients.
+- Analyze emergency room patient volume.
+- Monitor average patient wait times.
+- Track admission and non-admission rates.
+- Analyze patient demographics.
+- Identify referral department trends.
+- Measure patient satisfaction.
+- Create an interactive healthcare analytics dashboard.
 
-4. Which age groups visit the emergency room most frequently?
+---
+
+# 🛠 Tools & Technologies
+
+- Power BI
+- Power Query
+- DAX
+- Microsoft Excel
+- Data Modeling
+
+---
+
+# 📂 Dataset Information
+
+The dataset contains emergency room patient records including:
+
+- Patient ID
+- Patient Name
+- Patient Gender
+- Patient Age
+- Patient Race
+- Admission Status
+- Patient Admission Date
+- Patient Admission Time
+- Department Referral
+- Patient Wait Time
+- Patient Satisfaction Score
+- Admission Hours
+- Wait Time Status
+- Age Group
+
+---
+
+# 📈 Dashboard Features
+
+## KPI Cards
+
+- Total Patients
+- Average Wait Time
+- Patient Satisfaction Score
+- Total Patients Referred
+
+## Interactive Filters
+
+- Year Filter
+- Month Filter
+- Date Range Filter
+
+## Interactive Visualizations
+
+- Admission Status Analysis
+- Patient Gender Distribution
+- Patient Age Group Analysis
+- Patient Race Analysis
+- Department Referral Analysis
+- Daily Patient Trends
+- Wait Time Performance Analysis
+- Detailed Patient Records
+
+---
+
+# 📊 Business Questions Answered
+
+### 1. How many patients visited the emergency room?
+
+Analyze overall patient volume during the selected period.
+
+### 2. What is the average patient wait time?
+
+Measure service efficiency and identify bottlenecks.
+
+### 3. What percentage of patients were admitted?
+
+Compare admitted versus non-admitted patients.
+
+### 4. Which age groups visit the emergency room most frequently?
 
 Understand patient demographics.
 
-5. Which departments receive the most referrals?
+### 5. Which departments receive the highest referrals?
 
-Analyze referral trends across departments.
+Identify referral patterns and workload distribution.
 
-6. How does patient volume vary throughout the week?
+### 6. How does patient volume vary by day of the week?
 
-Identify peak traffic days for resource planning.
+Determine peak traffic periods.
 
-7. Are patients being seen within the target wait time?
+### 7. Are patients being seen within target wait times?
 
-Evaluate emergency room operational performance.
+Evaluate operational performance.
 
-📷 Dashboard Components
+---
 
-✔ KPI Cards
+# 📷 Dashboard Components
 
-✔ Line Charts
+✅ KPI Cards
 
-✔ Bar Charts
+✅ Bar Charts
 
-✔ Donut Charts
+✅ Line Charts
 
-✔ Matrix Visual
+✅ Donut Charts
 
-✔ Interactive Slicers
+✅ Matrix Visual
 
-✔ Navigation Buttons
+✅ Interactive Slicers
 
-✔ Dynamic Filtering
+✅ Navigation Buttons
 
-✔ Detailed Patient Records
+✅ Detailed Patient Table
 
-📊 DAX Measures Used
-Total Patients
+✅ Dynamic Filtering
+
+---
+
+# 📊 DAX Measures Used
+
+## Total Patients
+
+```DAX
 No of Patients =
 DISTINCTCOUNT('Hospital ER_Data'[Patient Id])
-Average Wait Time
+```
+
+## Average Wait Time
+
+```DAX
 Avg Wait Time =
 AVERAGE('Hospital ER_Data'[Patient Waittime])
-Average Satisfaction Score
+```
+
+## Average Satisfaction Score
+
+```DAX
 Patient Satisfaction Score =
 AVERAGE('Hospital ER_Data'[Patient Satisfaction Score])
-Total Referred Patients
+```
+
+## Total Referred Patients
+
+```DAX
 No of Patients Referred =
 CALCULATE(
     [No of Patients],
     'Hospital ER_Data'[Department Referral] <> "None"
 )
-📈 Key Insights
-Emergency room handled over 9,200+ patient visits.
-Admission and non-admission rates were almost equally distributed.
-Average patient wait time remained around 35 minutes.
-Patient satisfaction score averaged 4.99 / 5.
-Saturday recorded the highest patient traffic.
-General Practice generated the highest number of referrals.
-Most patients were seen within the target waiting period.
-🚀 Skills Demonstrated
-Data Cleaning
-Data Transformation
-Data Modeling
-DAX Calculations
-Power Query
-Healthcare Analytics
-Dashboard Development
-Data Visualization
-KPI Design
-Interactive Reporting
-Business Intelligence
-📁 Repository Contents
-📦 Hospital-Emergency-Room-Dashboard
- ┣ 📊 Hospital Emergency Room Dashboard.pbix
- ┣ 📷 dashboard-overview.png
- ┣ 📷 patient-details-page.png
- ┣ 📄 README.md
- ┗ 📄 Dataset.xlsx
-💡 Business Value
+```
 
-This dashboard helps healthcare organizations:
+---
 
-Monitor emergency room performance.
-Improve patient experience.
-Reduce waiting times.
-Track referral patterns.
-Support operational decision-making.
-Optimize resource allocation.
-👨‍💻 Author
+# 📈 Key Insights
 
-Abhay Vadhvana
+- Emergency room handled over **9,200+ patients**.
+- Admission and non-admission rates were nearly equal.
+- Average wait time was approximately **35 minutes**.
+- Patient satisfaction averaged **4.99/5**.
+- Saturday recorded the highest patient traffic.
+- General Practice generated the highest referrals.
+- Most patients were seen within target wait times.
 
-📧 Email: Your Email
+---
 
-💼 LinkedIn: Your LinkedIn Profile
+# 🚀 Skills Demonstrated
 
-🐙 GitHub: https://github.com/abhayshub
+- Data Cleaning
+- Data Transformation
+- Data Modeling
+- DAX Calculations
+- Power Query
+- Healthcare Analytics
+- Dashboard Development
+- KPI Design
+- Data Visualization
+- Business Intelligence
+- Interactive Reporting
+
+---
+
+# 👨‍💻 Author
+
+**Abhay Vadhvana**
+
+📧 Email: av.com007@gmail.com
+
+---
+
+# ⭐ Support
+
+If you found this project useful, consider giving it a **Star ⭐** on GitHub.
