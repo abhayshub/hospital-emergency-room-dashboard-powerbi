@@ -12,12 +12,14 @@ The dashboard converts raw healthcare data into actionable insights that help ho
 
 ## Monthly View Dashboard
 
-![Dashboard Overview](.png)
+![Dashboard Overview](https://github.com/abhayshub/hospital-emergency-room-dashboard-powerbi/blob/main/Hospital%20Emergency%20Room%20Overview.png
+)
 
 ## Patient Details Dashboard
 
-![Patient Details](patient-details-page.png)
-
+![Patient Details](
+https://github.com/abhayshub/hospital-emergency-room-dashboard-powerbi/blob/main/Patient%20Details%20%26%20Records.png
+)
 ---
 
 # 🎯 Project Objectives
